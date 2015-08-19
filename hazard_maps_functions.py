@@ -35,6 +35,24 @@ TOHe01r03/tide+077/depth-contours_small_map.png""".split()
 n_hmax_plots = len(hmax_plots)
 hmax_dir = '/Users/rjl/student_workshop/Realizations'
 
+p_contours_plots = """
+p-contours_zeta_00000.png
+p-contours_zeta_00050.png
+p-contours_zeta_00100.png
+p-contours_zeta_00200.png
+p-contours_zeta_00300.png""".split()
+p_contours_dir = '/Users/rjl/student_workshop/Realizations/ALL_CSZR'
+
+zeta_contours_plots = """
+zeta-contours_prob_0002.png
+zeta-contours_prob_0004.png
+zeta-contours_prob_001026.png
+zeta-contours_prob_002.png
+zeta-contours_prob_00333.png
+zeta-contours_prob_010.png""".split()
+zeta_contours_dir = '/Users/rjl/student_workshop/Realizations/ALL_CSZR'
+
+
 def make_show_image(images, image_dir='.', width=500):
     def show_image(k):
         from IPython.display import Image, display
