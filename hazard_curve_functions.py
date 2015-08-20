@@ -57,5 +57,7 @@ def makefig(h2,p2):
     fig = plot_hazard_curve(h_ev,p_ev)
     ax = fig.axes[0]
     ax.text(0.5, 1e-1, 'h2 = %3.1f' % h2)
+    ax = fig.axes[1]
+    ax.set_ylim(-0.0001,0.007)
     return fig
     

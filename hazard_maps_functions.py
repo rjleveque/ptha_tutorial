@@ -19,8 +19,22 @@ HazardCurveFarCascacadiaAll_GridPoint_176862.png""".split()
 n_hc_plots = len(hc_plots)
 hc_dir = '/Users/rjl/student_workshop/Realizations/HC_SAMEGRAPH'
 
+hmax_plots = """AASZe01r01/tide+077/depth-contours_map.png
+AASZe03r01/tide+077/depth-contours_map.png
+AASZe05r01/tide+077/depth-contours_map.png
+CSZRe01r01/tide+077/depth-contours_map.png
+CSZRe02r01/tide+077/depth-contours_map.png
+CSZRe03r01/tide+077/depth-contours_map.png
+CSZRe04r01/tide+077/depth-contours_map.png
+CSZRe05r01/tide+077/depth-contours_map.png
+KmSZe09r01/tide+077/depth-contours_map.png
+KrSZe12r01/tide+077/depth-contours_map.png
+SChSZe14r01/tide+077/depth-contours_map.png
+TOHe01r03/tide+077/depth-contours_map.png""".split()
+n_hmax_plots = len(hmax_plots)
+hmax_dir = '/Users/rjl/student_workshop/Realizations'
 
-hmax_plots = """AASZe01r01/tide+077/depth-contours_small_map.png
+hmax_small_plots = """AASZe01r01/tide+077/depth-contours_small_map.png
 AASZe03r01/tide+077/depth-contours_small_map.png
 AASZe05r01/tide+077/depth-contours_small_map.png
 CSZRe01r01/tide+077/depth-contours_small_map.png
@@ -32,8 +46,8 @@ KmSZe09r01/tide+077/depth-contours_small_map.png
 KrSZe12r01/tide+077/depth-contours_small_map.png
 SChSZe14r01/tide+077/depth-contours_small_map.png
 TOHe01r03/tide+077/depth-contours_small_map.png""".split()
-n_hmax_plots = len(hmax_plots)
-hmax_dir = '/Users/rjl/student_workshop/Realizations'
+n_hmax_small_plots = len(hmax_plots)
+hmax_small_dir = '/Users/rjl/student_workshop/Realizations'
 
 p_contours_plots = """
 p-contours_zeta_00000.png
