@@ -6,6 +6,7 @@
 For general information on Jupyter notebooks, see http://ipython.org/ and https://jupyter.org/.
 
 For many cool examples of notebooks, see:
+
  - [nbviewer](http://nbviewer.ipython.org/) (which can be used to view static notebooks on the web)
  - [Gallery of interesting notebooks](https://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks)
  
