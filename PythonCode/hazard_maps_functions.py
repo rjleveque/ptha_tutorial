@@ -1,3 +1,8 @@
+
+"""
+Make lists of plots to display in notebooks.
+"""
+
 import os,sys
 
 data_dir = os.path.abspath('../DataFiles')
@@ -61,14 +66,14 @@ HazardCurve_Zeta_GridPoint_176862.png""".split()
 
 hc_plots = [os.path.join(sample_dir, hc) for hc in hc_plots]
 
-
 p_contours_plots = """
 p-contours_zeta_00000.png
 p-contours_zeta_00050.png
 p-contours_zeta_00100.png
 p-contours_zeta_00200.png
 p-contours_zeta_00300.png""".split()
-p_contours_dir = '/Users/rjl/student_workshop/Realizations/ALL_CSZR'
+
+p_contours_plots = [os.path.join(sample_dir, p) for p in p_contours_plots]
 
 zeta_contours_plots = """
 zeta-contours_prob_0002.png
@@ -77,6 +82,6 @@ zeta-contours_prob_001026.png
 zeta-contours_prob_002.png
 zeta-contours_prob_00333.png
 zeta-contours_prob_010.png""".split()
-zeta_contours_dir = '/Users/rjl/student_workshop/Realizations/ALL_CSZR'
 
+zeta_contours_plots = [os.path.join(sample_dir, zeta) for zeta in zeta_contours_plots]
 
