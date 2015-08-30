@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document><name>CCregion.kml</name>
+
+<Style id="Path">
+<LineStyle><color>FFFFFFFF</color><width>3</width></LineStyle>
+<PolyStyle><color>00000000</color></PolyStyle>
+</Style>
+<Placemark><name>Crescent City subset</name>
+<description>  x1 = -124.202, x2 = -124.179
+  y1 = 41.7397, y2 = 41.7627</description>
+<styleUrl>#Path</styleUrl>
+<Polygon>
+<tessellate>1</tessellate>
+<altitudeMode>clampToGround</altitudeMode>
+<outerBoundaryIs><LinearRing><coordinates>
+
+-124.2022,41.7397,0.0000
+-124.1791,41.7397,0.0000
+-124.1791,41.7627,0.0000
+-124.2022,41.7627,0.0000
+-124.2022,41.7397,0.0000
+
+</coordinates></LinearRing></outerBoundaryIs>
+</Polygon>
+</Placemark>
+
+</Document>
+</kml>
