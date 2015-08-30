@@ -1,5 +1,18 @@
+import os,sys
 
-hc_plots = """HazardCurveFarCascacadiaAll_GridPoint_019084.png
+data_dir = os.path.abspath('../DataFiles')
+
+events_dir = os.path.join(data_dir, 'Events')
+
+sample_dir = os.path.join(data_dir, 'SampleResults')
+
+all_events = ['AASZa', 'AASZb', 'AASZc', 'AASZd', 'CSZa', 'CSZb', 'CSZc', 'CSZd', 'CSZe', \
+              'CSZf', 'KmSZa', 'KrSZa', 'SChSZa', 'TOHa']
+hmax_plots = []
+for event in all_events:
+    hmax_plots.append(os.path.join(events_dir, event, 'depth-contours_map.png'))
+
+hc_split_plots = """HazardCurveFarCascacadiaAll_GridPoint_019084.png
 HazardCurveFarCascacadiaAll_GridPoint_019192.png
 HazardCurveFarCascacadiaAll_GridPoint_019300.png
 HazardCurveFarCascacadiaAll_GridPoint_019516.png
@@ -16,38 +29,38 @@ HazardCurveFarCascacadiaAll_GridPoint_130300.png
 HazardCurveFarCascacadiaAll_GridPoint_130350.png
 HazardCurveFarCascacadiaAll_GridPoint_140184.png
 HazardCurveFarCascacadiaAll_GridPoint_176862.png""".split()
-n_hc_plots = len(hc_plots)
-hc_dir = '/Users/rjl/student_workshop/Realizations/HC_SAMEGRAPH'
 
-hmax_plots = """AASZe01r01/tide+077/depth-contours_map.png
-AASZe03r01/tide+077/depth-contours_map.png
-AASZe05r01/tide+077/depth-contours_map.png
-CSZRe01r01/tide+077/depth-contours_map.png
-CSZRe02r01/tide+077/depth-contours_map.png
-CSZRe03r01/tide+077/depth-contours_map.png
-CSZRe04r01/tide+077/depth-contours_map.png
-CSZRe05r01/tide+077/depth-contours_map.png
-KmSZe09r01/tide+077/depth-contours_map.png
-KrSZe12r01/tide+077/depth-contours_map.png
-SChSZe14r01/tide+077/depth-contours_map.png
-TOHe01r03/tide+077/depth-contours_map.png""".split()
-n_hmax_plots = len(hmax_plots)
-hmax_dir = '/Users/rjl/student_workshop/Realizations'
+hc_split_plots = [os.path.join(sample_dir, hc) for hc in hc_split_plots]
 
-hmax_small_plots = """AASZe01r01/tide+077/depth-contours_small_map.png
-AASZe03r01/tide+077/depth-contours_small_map.png
-AASZe05r01/tide+077/depth-contours_small_map.png
-CSZRe01r01/tide+077/depth-contours_small_map.png
-CSZRe02r01/tide+077/depth-contours_small_map.png
-CSZRe03r01/tide+077/depth-contours_small_map.png
-CSZRe04r01/tide+077/depth-contours_small_map.png
-CSZRe05r01/tide+077/depth-contours_small_map.png
-KmSZe09r01/tide+077/depth-contours_small_map.png
-KrSZe12r01/tide+077/depth-contours_small_map.png
-SChSZe14r01/tide+077/depth-contours_small_map.png
-TOHe01r03/tide+077/depth-contours_small_map.png""".split()
-n_hmax_small_plots = len(hmax_plots)
-hmax_small_dir = '/Users/rjl/student_workshop/Realizations'
+    
+hc_plots = """
+HazardCurve_WaveHt_GridPoint_019516.png
+HazardCurve_WaveHt_GridPoint_043640.png
+HazardCurve_WaveHt_GridPoint_057513.png
+HazardCurve_WaveHt_GridPoint_086900.png
+HazardCurve_WaveHt_GridPoint_130150.png
+HazardCurve_WaveHt_GridPoint_130200.png
+HazardCurve_WaveHt_GridPoint_130250.png
+HazardCurve_WaveHt_GridPoint_130300.png
+HazardCurve_WaveHt_GridPoint_130350.png
+HazardCurve_WaveHt_GridPoint_130937.png
+HazardCurve_WaveHt_GridPoint_152611.png
+HazardCurve_WaveHt_GridPoint_176862.png
+HazardCurve_Zeta_GridPoint_019516.png
+HazardCurve_Zeta_GridPoint_043640.png
+HazardCurve_Zeta_GridPoint_057513.png
+HazardCurve_Zeta_GridPoint_086900.png
+HazardCurve_Zeta_GridPoint_130150.png
+HazardCurve_Zeta_GridPoint_130200.png
+HazardCurve_Zeta_GridPoint_130250.png
+HazardCurve_Zeta_GridPoint_130300.png
+HazardCurve_Zeta_GridPoint_130350.png
+HazardCurve_Zeta_GridPoint_130937.png
+HazardCurve_Zeta_GridPoint_152611.png
+HazardCurve_Zeta_GridPoint_176862.png""".split()
+
+hc_plots = [os.path.join(sample_dir, hc) for hc in hc_plots]
+
 
 p_contours_plots = """
 p-contours_zeta_00000.png
@@ -67,13 +80,3 @@ zeta-contours_prob_010.png""".split()
 zeta_contours_dir = '/Users/rjl/student_workshop/Realizations/ALL_CSZR'
 
 
-def make_show_image(images, image_dir='.', width=500):
-    def show_image(k):
-        from IPython.display import Image, display
-        import os  
-        file_path = os.path.join(image_dir, images[k])
-        display(Image(file_path,width=width))
-        print images[k]
-    return show_image
-
-#interact(show_image,k=(0,n_images-1))
