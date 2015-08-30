@@ -9,20 +9,33 @@ There's not much here yet, but more will be added.
 
 For some general tips on using SageMathCloud, open the file [SageMathCloud.md](SageMathCloud.md). If you click the link, it will open a new tab in your browser open to that page.  Alternatively, you can return to the `Files` tab and navigate to the page, or use `open` at a terminal prompt, and it will open a new SMC tab in your current web browser tab. 
 
-### Jupyter notebook on hazard curves. 
+See the file [Jupyter.md](Jupyter.md) in this directory for more hints on using Jupyter notebooks.
+
+### Jupyter notebook `Hazard_Maps.ipynb` 
 
 Start by reading through this notebook, which explains some basic ideas used in probabilistic mapping.
 
-See the file [Jupyter.md](Jupyter.md) in this directory for more hints on using notebooks.
+To open this notebook, click the `Files` tab at the top of the webpage and then navigate back to the home directory and then to `Notebooks/Hazard_Maps.ipynb`.  Click on this to open the notebook. It will take a few seconds to load and start running. 
 
-To open this notebook, click the `Files` tab at the top of the webpage and then navigate back to the home directory and then to `hazard_curves/Hazard_Curves.ipynb`.  Click on this to open the notebook. It will take a few seconds to load and start running.  You can scroll down to read what's there and view the images that are pre-loaded. 
+The first thing to do when you open the notebook is to select `Run all` from the `Cell` menu at the top of the notebook.  This will execute all cells in the notebook and may take a few seconds.  Once it's down, you should see the figures it produces and also use the slider bars that appear above some of the figures to sweep through different plots.
 
-This notebook contains a couple quizzes so you can check your understanding.  
+### Jupyter notebook `Hazard_Curves.ipynb` 
 
-The first thing to do when you open the notebook is to select `Run all` from the `Cell` menu at the top of the notebook.  This will execute all cells in the notebook and may take a few seconds.  Once it's down, you should see the figures it produces and also use the slider bars that appear above one of the figures to adjust values.
+To open this notebook, click the `Files` tab at the top of the webpage and then navigate back to the home directory and then to `Notebooks/Hazard_Curves.ipynb`.  Click on this to open the notebook. 
 
-Now you should be able to scroll down to the first Quiz, replace `"?"` by your answer in the code cell, and hit `Shift-Enter` to see if you are correct.
+Again you should `Run all` to execute the cells so that the slider bars work.
+
+This notebook contains a couple quizzes so you can check your understanding.
+
+For each quiz, you should be able to replace `"?"` by your answer in the code cell, and hit `Shift-Enter` to see if you are correct.
 
 You can also try changing values in other code cells and re-execute to create new versions of some of the plots.
 
-Note that what's computed in each cell will depend on what's been executed previously, and the order in which the cells were executed.  Executing a cell simply runs the commands contained in that cell in an IPython kernal running in the background.   
+Note that what's computed in each cell will depend on what's been executed previously, and the order in which the cells were executed.  Executing a cell simply runs the commands contained in that cell in an IPython kernal running in the background. 
+
+### Jupyter notebook `Make_Hazard_Curves_and_Maps.ipynb` 
+
+This notebook illustrates how to create hazard curves and maps, using some sample data for a small portion of Crescent City, CA.
+
+
+
