@@ -24,18 +24,7 @@ y=y.reshape((Nptsx,Nptsy),order='F')
 #and latitude remains fixed.  Likewise, as the second argument
 #increases, the latitude increases and the longitude remains fixed.
 
-#####################
-#DATAFILE: (In the tide+077 directory under each Realization): h_eta_small.npy
+# To read in and then write out as a text file `xyB.txt` with three
+# columns x,y,B, open a terminal and type
+#    python make_xyB.py
 
-#These files are one column long with 250*250 rows with the same
-#meaning described above for the value of h_eta at the grid points.
-
-#To read in to Python:
-h_eta=load('h_eta_small.npy')
-
-#To make this into a 2D structures:
-Nptsx=250; Nptsy=250;
-h_eta=h_eta.reshape((Nptsx,Nptsy),order='F')
-#####################
-
-################### Text version is a three column txt file called bythy.txt          
