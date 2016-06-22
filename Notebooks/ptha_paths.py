@@ -5,11 +5,11 @@ Adjust if necessary below...
 """
 
 import os,sys
-HOME = os.environ['HOME']    # path to home directory
 
 #---------------------------------------------------------------------
 # Adjust this line if needed to set path properly:
-ptha_dir = os.path.join(HOME, 'ptha_tutorial')  
+ptha_dir = os.path.abspath('..')
+# Should be right when this module is imported from Notebooks subdirectory.
 #---------------------------------------------------------------------
 
 print "Assuming that top level of this repository is at: %s" % ptha_dir
@@ -23,5 +23,4 @@ print "    Data files can be found in data_dir = %s"  % data_dir
 
 events_dir = os.path.join(data_dir, 'Events')
 print "    Results for each event can be found in events_dir = %s"  % events_dir
-
 
