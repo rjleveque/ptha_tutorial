@@ -1,3 +1,4 @@
+from __future__ import print_function
 from numpy import ma
 import os, glob, re
 import matplotlib.pyplot as plt
@@ -76,7 +77,7 @@ def query_transect(x,y,z,ax=None,ax2=None):
         ax.set_aspect(1./(np.cos(y0*np.pi/180.)))
         plt.colorbar(cplot, ax=ax)
 
-    print "Click transect end points on map... "
+    print("Click transect end points on map... ")
     xy1 = ax.figure.ginput(1,timeout=0)[0]
     ax.plot([xy1[0]],[xy1[1]],'r+',markersize=12)
     xy2 = ax.figure.ginput(1,timeout=0)[0]
@@ -116,7 +117,7 @@ def plot_transect_zi(xi,yi,zi,ax=None,clear=True,fill_below=None):
                 interpolate=True, color='b')
 
 def query_point(X,Y,Z,axes):
-    print "Click point on map... "
+    print("Click point on map... ")
     xy = plt.ginput(1,timeout=0)[0]
     xi = [xy[0]]
     yi = [xy[1]]
@@ -126,13 +127,13 @@ def query_point(X,Y,Z,axes):
     
 def query_points(X,Y,Z,axes):
     while True:
-        print "Click point on map... "
+        print("Click point on map... ")
         xy = plt.ginput(1,timeout=0)[0]
         xi = [xy[0]]
         yi = [xy[1]]
         axes.plot(xi,yi,'k+',markersize=12)
         zi = interp(xi,yi,X,Y,Z)
-        print "x = %g, y = %g, z = %g" % (xy[0],xy[1],zi)
+        print("x = %g, y = %g, z = %g" % (xy[0],xy[1],zi))
     
 def query_transect2(x,y,z,axes):
     """
@@ -141,7 +142,7 @@ def query_transect2(x,y,z,axes):
 
     """
 
-    print "Click transect end points on map... "
+    print("Click transect end points on map... ")
     xy1 = plt.ginput(1,timeout=0)[0]
     axes.plot([xy1[0]],[xy1[1]],'r+',markersize=12)
     xy2 = plt.ginput(1,timeout=0)[0]
